@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  z-index: 4;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: crimson;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: aliceblue;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+
+.navbar .logo a span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+
+.navbar .menu li a {
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  margin-right: 40px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+  font-size: 18px;
+  font-weight: 500;
+}
+/*menu styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+}
+/* home section */
+.home {
+  
+  background: url(image.jpg) no-repeat center;
+  height: 755px;
+  
+  color:white;
+  background-color: rgb(3, 3, 3);
+  
+  font-family:"Edu VIC WA NT Beginner" , cursive;
+}
+
+.home .max-width {
+  margin: auto 300px;
+}
+.home .home-content .text-1 {
+  font-size: 95px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 80px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span {
+  color: rgb(192, 38, 69);
+  font-weight: 499;
+}
+.home .home-content a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover {
+  color: crimson;
+  background: none;
+}
+/*about section styling*/
+
+section {
+  padding: 100px;
+  text-align: center;
+}
+.about,
+.skills {
+  
+  text-align: center;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+.about .about-content,
+.skills {
+  text-align:center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  background: white;
+  color: crimson;
+  transform: translateX(-50%);
+}
+
+.about .about-content .left {
+  width: 35%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  margin-right: 30px;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+  font-weight: 1000px;
+ 
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+  color: crimson;
+  background: none;
+}
+.about .about-content .column {
+  width: 50%;
+}
+/* responsive media query start */
+
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    
+  }
+}
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .menu-btn {
+    display: block;
+    z-index: 99;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .max-width {
+    padding: 0 25px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+  .home .home-content .text-3 {
+    font-size: 27px;
+  }
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column {
+    width: 50%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+}
+/*skill styling*/
+.image {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  margin-bottom: 20%;
+  margin-top: 10%;
+  margin-left: 200px;
+  margin-right: 20px;
+  
+}
+
+.skills .title::after {
+  text-align: center;
+  content: "what i know";
+}
+.skills .skills-content .column {
+  width: auto;
+}
+.skilled{
+  font-size: 40px;
+}
+.skills .skills-content .left .text {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content p {
+  font-weight: 500;
+  font-size: 300px;
+}
+
+.skills .skills-content .right .bars {
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+.skills .skills-content .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .skills-content .right .line {
+  height: 5px;
+  width: (50px-30px);
+  background: grey;
+}
+.skills .skills-content .left a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+  font-weight: 500;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+h2 {
+  justify-content: center; 
+  font-size: 40px;
+  display :flex;
+}
+
+form {
+  margin: 5%;
+}
+form > label {
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.2rem 0;
+  font-weight: bold;
+  
+}
+
+form > input {
+  width: 50%;
+  padding: 0.2rem 0;
+}
+
+form > select {
+  width: 50%;
+  padding: 0.2rem 0;
+}
+
+::placeholder {
+  padding: 0.2rem 0.2rem;
+}
+
+form > textarea {
+  width: 50%;
+}
+
+form > input[type="file"] {
+  width: 90%;
+  padding: 0.4rem 0.1rem;
+  border: 0.01rem solid grey;
+  border-radius: 0.3rem;
+  margin: 0.3rem 0;
+}
+
+#condition {
+  /* width: 2%; */
+  margin: 0.2rem 0;
+}
+#contacts{
+  display: flex;
+  text-align: center;
+  font-weight: 1000;
+  font-size: 30;
+}
+
+
+button {
+  display: block;
+  background-color: crimson;
+  
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 18px;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  margin-left: 560px;
+  margin-bottom: 30px;
+}
+button:hover{
+  color: crimson;
+  background: none;
+  margin: 0%s;
+
+
+}
+.contact{
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  height: 100vh;
+  justify-content: space-between;
+}
